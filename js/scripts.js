@@ -22,6 +22,7 @@ Player.prototype.roll = function() {
       this.endTurn();
     } else {
       this.currentScore += this.currentRoll;
+      this.checkBank();
     }
 
     console.log("Current Score: " + this.currentScore);
@@ -55,6 +56,13 @@ Player.prototype.endTurn = function() {
   console.log("");
 }
 
+Player.prototype.checkBank = function() {
+  if (this.bank + this.currentScore >= 100) {
+    alert("You won!!")
+    //$("#gameWin").show();
+  }
+}
+
 // User Interface Logic
 $(document).ready(function() {
 
@@ -67,7 +75,7 @@ player1.startTurn();
     player1.roll();
   });
 
-  $("#hide").click(function() {
+  $("#hold").click(function() {
     player1.hold();
   });
 
