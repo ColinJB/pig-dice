@@ -60,15 +60,12 @@ Player.prototype.endTurn = function() {
     player1.isTurn = true;
     player2.isTurn = false;
   }
-
-  // if(player1.isTurn === true) {
-  //   player1.isTurn = false;
-  //   player2.isTurn = true;
-  // } else if (player2.isTurn === true) {
-  //   player2.isTurn = false;
-  //   player1.isTurn = true;
-  // }
-
+  $("#bank1").text(player1.bank);
+  $("#bank2").text(player2.bank);
+  $("#roll1").text(player1.currentRoll);
+  $("#score1").text(player1.currentScore);
+  $("#roll2").text(player2.currentRoll);
+  $("#score2").text(player2.currentScore);
   console.log("Is Turn: " + this.isTurn);
   console.log("");
 }
@@ -83,8 +80,8 @@ Player.prototype.checkBank = function() {
 
 // User Interface Logic
 $(document).ready(function() {
-
-
+  $("#bank1").text(player1.bank);
+  $("#bank2").text(player2.bank);
 player1.startTurn();
 // player2.endTurn();
 // console.log(player1);
@@ -96,8 +93,10 @@ player1.startTurn();
     } else if (player2.isTurn === true) {
       player2.roll();
     }
-
-    //player1.roll();
+    $("#roll1").text(player1.currentRoll);
+    $("#roll2").text(player2.currentRoll);
+    $("#score1").text(player1.currentScore);
+    $("#score2").text(player2.currentScore);
   });
 
   $("#hold").click(function() {
