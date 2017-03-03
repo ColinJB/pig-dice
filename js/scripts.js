@@ -7,8 +7,8 @@ function Player(name) {
   this.playerName = name;
 }
 
-var player1 = new Player("player1");
-var player2 = new Player("player2");
+var player1 = new Player("Player 1");
+var player2 = new Player("Player 2");
 var players = [player1, player2];
 
 Player.prototype.roll = function() {
@@ -23,9 +23,11 @@ Player.prototype.roll = function() {
       this.currentScore = 0;
       this.addToTotal(this.currentScore);
       this.endTurn();
+      $(".greed").show();
     } else {
       this.currentScore += this.currentRoll;
       this.checkBank();
+      $(".greed").hide();
     }
 
     console.log("Current Score: " + this.currentScore);
@@ -72,11 +74,11 @@ Player.prototype.endTurn = function() {
 
 Player.prototype.checkBank = function() {
   if (this.bank + this.currentScore >= 100) {
-    alert("You won!!")
-    //$("#gameWin").show();
+    $("#won").show();
+    $("#winner").text(this.playerName);
+    $("#toggle").effect("pulsate",4000);
   }
 }
-
 
 // User Interface Logic
 $(document).ready(function() {

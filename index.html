@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Pig Dice</title>
   </head>
   <body>
     <div class="container">
-      <h1>Pig Dice!</h1>
+      <h1><strong>Pig Dice!</strong></h1>
+      <div id="toggle"><p id="woo"><span id="winner"></span> Won!!!</p><img id="won" src="winpig.gif"></div>
       <div class="row">
         <div id="column1" class="col-md-5">
           <h2>Player 1 Bank: <strong><span id="bank1"></span></strong></h2>
@@ -22,7 +25,7 @@
         <div id="btnColumn" class="col-md-2">
           <span id="roll" class="btn btn-danger btn-lg btn-block">Roll</span>
           <br>
-          <span id="hold" class="btn btn-warning btn-lg btn-block">Hold</span>
+          <span id="hold" class="btn btn-lg btn-block">Hold</span>
         </div>
         <div id="column2" class="col-md-5">
           <h2>Player 2 Bank: <strong><span id="bank2"></span></strong></h2>
@@ -32,6 +35,10 @@
             <h4>Current Score: <span id="score2"></span></h4>
           </div>
         </div>
+      </div>
+      <div class="greed">
+        <p><strong>Don't be greedy!!</strong></p>
+        <img src="greed.jpg">
       </div>
     </div>
   </body>

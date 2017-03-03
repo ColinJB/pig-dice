@@ -6,15 +6,72 @@
   margin-top: 30px;
 }
 
-h4 {
-  text-align: center;
+#hold {
+  background-color: rgb(255, 204, 204);
+}
+
+body {
+  background-image: url(http://sandbox.unclesgames.com/images/products/00515.jpg);
 }
 
 h2 {
   text-align: center;
+  color: rgb(255, 77, 77);
+  text-shadow: 2px 2px black;
+  font-size: 40px;
+  font-family: fantasy;
+  font-weight: bolder;
 }
+
+h4 {
+  text-align: center;
+  color: rgb(255, 77, 77);
+  text-shadow: 1px 1px black;
+  font-size: 25px;
+}
+
 
 h1 {
   text-align: center;
   font-family: fantasy;
+  color: rgb(255, 77, 77);
+  font-size: 100px;
+  text-shadow: 7px 7px black;
+}
+
+.greed {
+  display: none;
+  margin: 60px;
+}
+
+.greed p {
+  font-size: 80px;
+  font-family: fantasy;
+  text-align: center;
+  color: rgb(255, 77, 77);
+  text-shadow: 2px 2px black;
+}
+
+img {
+  display: inline;
+  border-radius: 120px;
+  border: 12px solid rgba(255, 77, 77, 0.9);
+}
+
+#won {
+  border: 12px solid rgba(255, 77, 77, 0.9);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#woo {
+  text-align: center;
+  color: rgb(255, 77, 77);
+  font-size: 120px;
+  text-shadow: 4px 4px white;
+}
+
+#toggle {
+  display: none;
 }
